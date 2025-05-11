@@ -7,18 +7,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        parchment: "#F5F0E1",
-        charcoal: "#2E2E2E",
-        gold: "#C49B66",
-        navy: "#2A3E5C",
+        parchment: "#FCF7ED",
+        ink: "#1B1B1B",
+        accent: "#A67C52",
       },
       fontFamily: {
-        heading: ["Libre Baskerville", "serif"],
-        body: ["Merriweather", "serif"],
+        heading: ["Playfair Display", "serif"],
+        body: ["Open Sans", "sans-serif"],
       },
     },
   },
   plugins: [],
 };
-
-  
