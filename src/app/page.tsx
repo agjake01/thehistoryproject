@@ -1,24 +1,13 @@
+// src/app/page.tsx
 "use client";
 import { motion } from "framer-motion";
 
 export default function HomePage() {
   const avatars = [
-    {
-      name: "George Washington",
-      src: "https://images.unsplash.com/photo-1573845355987-1309eea1f43b?auto=format&fit=crop&w=256&h=256",
-    },
-    {
-      name: "Benjamin Franklin",
-      src: "https://images.unsplash.com/photo-1542343631-7b3bf0d6cd3b?auto=format&fit=crop&w=256&h=256",
-    },
-    {
-      name: "John F. Kennedy",
-      src: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=256&h=256",
-    },
-    {
-      name: "Teddy Roosevelt",
-      src: "https://images.unsplash.com/photo-1520244437436-58863c279809?auto=format&fit=crop&w=256&h=256",
-    },
+    { name: "George Washington", src: "https://images.unsplash.com/photo-1573845355987-1309eea1f43b?auto=format&fit=crop&w=256&h=256" },
+    { name: "Benjamin Franklin", src: "https://images.unsplash.com/photo-1542343631-7b3bf0d6cd3b?auto=format&fit=crop&w=256&h=256" },
+    { name: "John F. Kennedy", src: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=256&h=256" },
+    { name: "Teddy Roosevelt", src: "https://images.unsplash.com/photo-1520244437436-58863c279809?auto=format&fit=crop&w=256&h=256" },
   ];
 
   return (
@@ -38,7 +27,7 @@ export default function HomePage() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-4 text-5xl font-heading"
+          className="mb-4 text-5xl font-playfair text-yellow-600"
         >
           The History Project
         </motion.h1>
@@ -46,7 +35,7 @@ export default function HomePage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="mb-8 max-w-xl text-lg"
+          className="mb-8 max-w-xl text-lg text-gray-900"
         >
           Step into the past—have lifelike conversations with AI avatars of
           history’s greatest minds.
@@ -56,11 +45,11 @@ export default function HomePage() {
           <input
             type="email"
             placeholder="Enter your email"
-            className="flex-1 rounded border border-ink/30 bg-white px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent"
+            className="flex-1 rounded border border-gray-300 bg-white px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-600"
           />
           <button
             type="submit"
-            className="rounded bg-accent px-6 py-2 font-heading text-ink hover:bg-opacity-90"
+            className="rounded bg-yellow-600 px-6 py-2 text-white hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-600"
           >
             Notify Me
           </button>
@@ -68,8 +57,10 @@ export default function HomePage() {
       </div>
 
       {/* Avatar carousel */}
-      <section className="relative z-10 mt-auto py-16">
-        <h2 className="mb-8 text-center text-2xl font-heading">Featured Avatars</h2>
+      <section className="relative z-10 mt-auto py-16 bg-gray-100">
+        <h2 className="mb-8 text-center text-2xl font-playfair text-gray-900">
+          Featured Avatars
+        </h2>
         <div className="mx-auto flex max-w-4xl gap-6 overflow-x-auto px-6">
           {avatars.map(({ name, src }) => (
             <div key={name} className="flex-shrink-0 w-48">
@@ -78,7 +69,7 @@ export default function HomePage() {
                 alt={name}
                 className="h-48 w-48 rounded-lg object-cover shadow-md"
               />
-              <p className="mt-2 text-center font-body">{name}</p>
+              <p className="mt-2 text-center text-gray-900">{name}</p>
             </div>
           ))}
         </div>
